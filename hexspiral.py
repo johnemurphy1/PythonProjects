@@ -1,4 +1,4 @@
-# HexSpiral1.py - draws a hexagon spiral
+# HexSpiral.py - draws a hexagon spiral
 import turtle
 t = turtle.Pen()
 for x in range (175):
