@@ -1,0 +1,25 @@
+vending_machine = {
+'Sour Patch Kids': 1.50,
+'Reeses': 1.25,
+'Orbit Peppermint Gum': 1.00,
+'Skittles': 1.25,
+'Mixed Nuts': 2.00,
+'Tate\'s Cookies': 2.75,
+'Doritos Nacho Cheese': 1.50,
+'Gatorade Red': 2.50,
+'Bubly': 1.50,
+'Hint Watermelon': 1.50
+}
+
+allowance = 5.00
+
+def get_a_snack():
+	for snack, price in vending_machine.items():
+		print('{}: ${}'.format(snack,price))
+	selection = input('What would you like from the vending machine? \n')
+	price = vending_machine[selection]
+	print("Vending machine dispensing", selection)
+	balance = allowance - price
+	print("Remaining balance is {}".format(balance))
+
+get_a_snack()	
