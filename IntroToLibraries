@@ -1,0 +1,18 @@
+import googletrans
+from googletrans import Translator, LANGUAGES
+import wikipedia
+
+subject = input("What would you like to learn about? ")
+
+summary = wikipedia.summary(subject, sentences = 3)
+print(summary)
+
+#print(googletrans.LANGUAGES)
+LANGCODES = dict(map(reversed, LANGUAGES.items()))
+
+language = input("Which language would you like? ")
+
+translator = Translator()
+trans = translator.translate(summary, dest=LANGCODES[language])
+print(trans.text)
+
