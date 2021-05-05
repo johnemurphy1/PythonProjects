@@ -1,0 +1,15 @@
+import random
+
+number = random.randint(1,25)
+
+#turns = 0
+#while turns !=5
+
+guess = int(input('I\'m thinking of a number between 1 and 25. \nWhat\'s your guess?'))
+
+while guess !=number:
+	guess = int(input('Wrong! I\'m thinking of a number between 1 and 25. \nWhat\'s your guess?'))
+
+	print('Wow you got it, good job! The number was', number)
+
+	
