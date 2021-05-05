@@ -1,0 +1,36 @@
+import requests
+import json
+from geopy.distance import geodesic
+import time
+
+url = "http://api.open-notify.org/iss-now.json"
+
+res = requests.get(url)
+obj = json.loads(res.content.decode('utf-8'))
+
+lat_lon1 = (obj['iss_position']['latitude'], obj['iss_position']['longitude'])
+
+print("First coordinates: ", lat_lon1)
+
+seconds = 10.0
+
+print("Waiting for ", seconds, "seconds...")
+time.sleep(seconds)
+print("Finished waiting!")
+
+res2 = requests.get(url)
+obj2 = json.loads(res2.content.decode('utf-8'))
+
+lat_lon2 = (obj2['iss_position']['latitude'], obj2['iss_position']['longitude'])
+print("Second coordinates: ", lat_lon2)
+
+miles = geodesic(lat_lon1,lat_lon2).miles
+print("In", seconds, "seconds, the ISS has travelled: ", miles, "miles.")
+
+speed_mps = miles/float(seconds)
+print("The ISS is going at:", speed_mps, "miles per second.")
+
+speed_mph = miles/float(seconds) * 3600
+print("The ISS is going at:", speed_mph, "miles per hour.")
+
+
