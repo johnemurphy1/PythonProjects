@@ -1,0 +1,12 @@
+noun_1 = input('Give me a plural noun ')
+verb = input('Give me a verb ending in -ed ')
+noun_2 = input('Give me another plural noun ')
+noun_3 = input('Give me a noun ')
+adjective = input('Give me an adjective ')
+food_1 = input('Give me a type of food ')
+food_2 = input('Give me another type of food ')
+noun_4 = input('Give me a noun ')
+noun_5 = input('One more noun ')
+noun_6 = input('One last noun, I promise ')
+
+print('Ice cream is a frozen desert made from' , noun_1, 'with added flavors and sweeteners. This mixture is quickly frozen while it is', verb, 'so that large', noun_2 , 'do not form. Some ice cream is made with' , noun_3 ,'extracted from seaweed, so that it is not' , adjective, '. There are different flavors of ice cream, such as', food_1 ,'and', food_2 , '. Ice cream often has things added to it for flavor like' , noun_4 , ',' , noun_5 ,'or' , noun_6 , '.')
