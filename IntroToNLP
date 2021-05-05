@@ -1,0 +1,19 @@
+from textblob import TextBlob
+
+text = input("Type your text here: ")
+analysis = TextBlob(text)
+
+activity = input("What would you like to do with the text? ")
+
+if activity =="mood":
+
+	mood_score = analysis.sentiment.polarity * 100
+
+	if mood_score > 0:
+		print("you are ", mood_score, "percent happy!")
+	else:
+		print("You are ", mood_score*(-1), "percent sad. ")
+	
+	if activity =="spellcheck":
+		correct_text = analysis.correct()
+		print("The correct text is: ", correct_text)
