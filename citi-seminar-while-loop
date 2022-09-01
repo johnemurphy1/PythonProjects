@@ -1,0 +1,10 @@
+#Created this small program to solve a Citi Python seminar student's question: could you use a while loop to solve this question. This is the question: 
+#Write a function countString with two arguments raw_string and string_to_count. Your function should return the number of times of string_to_count occurs in the the raw_string argument. In addition, Your function should be case insensitive.
+
+
+raw_string = "welcome to nyc(NYC) data science academy nyc!"
+def this_count():
+  while i < len(raw_string):
+    return False
+total_count = len(raw_string.lower().split('nyc')) - 1
+print (total_count)
