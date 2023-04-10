@@ -5,3 +5,13 @@ Expected an indented block: The body of a loop or conditional is not indented
 Unexpected indent: The line is indented too much
 Unexpected EOF while parsing: Missing bracket just before the end of the program
 Name [name of variable or function]is not defined: Usually caused by misspelling the name of the variable or function
+
+Debugging checklist
+Everything is spelled correctly
+Upper and lowercase letters are not used interchangeably
+Strings have a quotation mark at the beginning and end
+An opening bracket has a matching closing one
+The code has been saved since change were last made
+No letters are confused with numbers, like O and 0, or I and 1
+There are no unnecessary spaces at the start of a line
+Variables and functions are declared before they are used
