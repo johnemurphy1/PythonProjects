@@ -1,0 +1,7 @@
+Error Message: Meaning
+EOL found while scanning string literal: Closing quotation mark missing for a string on that line
+Unsupported operand type(s) for +:'int' and 'str': The + operator expects the values on either side of it to be the same type
+Expected an indented block: The body of a loop or conditional is not indented
+Unexpected indent: The line is indented too much
+Unexpected EOF while parsing: Missing bracket just before the end of the program
+Name [name of variable or function]is not defined: Usually caused by misspelling the name of the variable or function
