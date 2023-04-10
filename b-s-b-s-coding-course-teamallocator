@@ -1,0 +1,28 @@
+#Start
+import random
+
+players = ['Sue Smith','Ada Adams','Jean Jones','Claire Cook','Martin Moore','Harry Hall','Alice Apple','Craig Court','Rose Render','James Jump','William Wallace','Alan Alda']
+print ("Welcome To Team Allocator!")
+while True: #adds loop that allows selecting teams again
+  #1.ShufflePlayers
+  random.shuffle(players)
+  #2. Assign players from the first half of the player list to   Team1
+  team1 = players[:len(players)//2]
+  #3. Randomly pick captain on Team1
+  print("Team 1 captain: " + random.choice(team1))
+  #4. Display captain and players for Team1
+  print("Team 1: ")
+  for player in team1:
+    print(player)
+  #5. Assign players form the second half of the player list to   Team 2
+  team2 = players[len(players)//2:]
+  #6. Randomly pick captain for Team 2
+  print("\nTeam 2 captain: " + random.choice(team2))
+  #7. Display captain and players for Team 2
+  print("Team 2: ")
+  for player in team2:
+    print(player)
+  #8 Pick again?
+  response = input("Pick teams and captains again? Type y or n: ")
+  if response == "n":
+      break
