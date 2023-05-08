@@ -1,0 +1,46 @@
+#Program design:1.Start 2.Add budget 3.Add expenditures 4.Print summary 5. Convert the code to a class 6.END
+class BudgetManager:
+    def __init__(self, amount):
+        self.available = 2500.00 #sets variable available to an example starting amount
+        self.budgets = {} #curly brackets are used to create a dictionary - empty here
+        self.expenditure = {}
+
+    def add_budget(self, name, amount):
+    #global available #available will be global when set in this function
+        if name in self.budgets:#checks to see if name already exists as key in budgets dictionary
+            raise ValueError("Budget exists")#leaves function immediately with exception if budget name appears more than once
+        if amount > self.available:
+            raise ValueError("Insufficient funds")
+        self.budgets[name] = amount #stores the budgeted amount in budgets dictionary
+        self.available -= amount #deducts budgeted amount from available amount
+        self.expenditure[name] = 0 #sets the spent amount for this budget to 0
+        return self.available #returns new available amount
+
+    def spend(self, name, amount):
+        if name not in self.expenditure:
+            raise ValueError("No such budget")
+        self.expenditure[name] += amount
+        budgeted = self.budgets[name]#gets total amount spent
+        spent = self.expenditure[name]
+        budgeted -= spent
+        return budgeted #return amount left in budget
+    
+bm = BudgetManager(2500)
+bm.spend("Groceries",50)
+    
+def print_summary(self):
+    print("Budget               Budgeted     Spent  Remaining")
+    print("---------------------------------------------------")
+    total_budgeted = 0
+    total_spent = 0
+    total_remaining = 0
+    for name in self.budgets:
+        budgeted = self.budgets[name]
+        spent = self.expenditure[name]
+        remaining = budgeted - spent
+        print(f'{name:15s} {budgeted:10.2f} {spent:10.2f} {remaining:10.2f}')
+        total_budgeted += budgeted
+        total_spent += spent
+        total_remaining += remaining
+    print("-------------- ----------- ------- -------------")
+    print(f'{"Total":15s} {total_budgeted:10.2f} {total_spent:10.2f} {total_budgeted - total_spent:10.2f}')
